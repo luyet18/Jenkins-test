@@ -1,8 +1,8 @@
 pipeline {
   agent any
 
-  tools {
-    nodejs "node"
+  tools { 
+    nodejs "node" // node: nombre definido en Global Tool Configuration (instalaciones de NodeJS)
   }
 
   stages {
