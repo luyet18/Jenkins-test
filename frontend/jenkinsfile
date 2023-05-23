@@ -9,10 +9,9 @@ pipeline {
     stage('install') {
       steps {
         git branch: 'master', url: 'https://github.com/luyet18/Jenkins-test.git'
-        sh 'npm install'
-        //dir('src') {
-        //  sh 'npm install'
-        //}
+        dir('frontend') {
+         sh 'npm install'
+        }
       }
     }
 
