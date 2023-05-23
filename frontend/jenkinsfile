@@ -10,7 +10,15 @@ pipeline {
       steps {
         git branch: 'master', url: 'https://github.com/luyet18/Jenkins-test.git'
         dir('frontend') {
-         bat 'npm install'
+          bat 'npm install'
+        }
+      }
+    }
+
+    stage('build') {
+      steps {
+        dir('frontend') {
+          bat 'npm run build'
         }
       }
     }
